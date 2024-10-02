@@ -9,4 +9,4 @@ jobs:
 
     steps:
     - name: Run tests
-      run: pnpm run test
+      run: wget -qO- https://get.pnpm.io/install.sh | sh - && yarn && pnpm run test
