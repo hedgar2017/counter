@@ -4,10 +4,13 @@ on:
   workflow_dispatch:
 
 jobs:
-  greet:
+  test:
     runs-on: ubuntu-latest
-
     steps:
+    
+    - name: Checkout source
+      uses: actions/checkout@v4
+    
     - name: Run tests
       env:
         SHELL: 'zsh'
