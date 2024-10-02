@@ -9,4 +9,6 @@ jobs:
 
     steps:
     - name: Run tests
-      run: wget -qO- https://get.pnpm.io/install.sh | sh - && yarn && pnpm run test
+      env:
+        SHELL: "zsh"
+      run: wget -qO- https://get.pnpm.io/install.sh | sh - && pnpm run test
