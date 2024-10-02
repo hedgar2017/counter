@@ -10,5 +10,8 @@ jobs:
     steps:
     - name: Run tests
       env:
-        SHELL: "zsh"
-      run: wget -qO- https://get.pnpm.io/install.sh | sh - && pnpm run test
+        SHELL: 'zsh'
+      run: |
+        wget -qO- 'https://get.pnpm.io/install.sh' | sh -
+        source "${HOME}/.zshrc"
+        pnpm run test
