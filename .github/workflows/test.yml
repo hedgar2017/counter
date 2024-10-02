@@ -17,5 +17,5 @@ jobs:
       run: |
         wget -qO- 'https://get.pnpm.io/install.sh' | sh -
         source "${HOME}/.zshrc"
-        ls -lAR
+        pnpm install
         pnpm run test
